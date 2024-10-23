@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="Tablo Logo.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beef Forequarter Kalitiran Raw Mat</title>
+</head>
+
+<body id="prods" onload="document.forms[0].elements['STIME'].value = String(new Date()).match(/\d\d:\d\d:\d\d/)">
+  <form onsubmit="this.elements['FTIME'].value= String(new Date()).match(/\d\d:\d\d:\d\d/)"
+    action="https://script.google.com/macros/s/AKfycbz0CHy5iXP-t2QRnX8bXsPDYSsO7zDSO7xLUBCMkM6JxoZH3q1vaGxv49CGXJTCu1zYLQ/exec"
+    method="post">
+    <div class="container">
+      <img src="Tablo Logo.jpg" alt="Tablo Logo">
+      <h1><strong>BEEF FOREQUARTER KALITIRAN</strong></h1>
+      <label>BRAND</label>
+      <select name="BRAND" id="brand">
+        <option selected disabled>Select Brand Here</option>
+        <option value="Tagaytay">Tagaytay</option>
+      </select>
+      <input id="time" name="TIME"
+        style="width: 380px; margin-bottom: 20px; text-align: center; background-color: rgb(255, 141, 90);"><br>
+      <input type="hidden" name="PRODUCT NAME" value="Beef Forequarter Kalitiran">
+      <label>FINISHED GOODS</label>
+      <input onblur="findTotal()" class="vari" type="number" name="FINISHED" step=".001" placeholder="grams"><br>
+      <label>VARIANCE</label><br>
+      <label>1.</label>
+      <select class="ops" name="VARIANCE 1">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V1 QTY" step=".001" placeholder="grams"><br>
+      <label>2.</label>
+      <select class="ops" name="VARIANCE 2">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V2 QTY" step=".001" placeholder="grams"><br>
+      <label>3.</label>
+      <select class="ops" name="VARIANCE 3">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V3 QTY" step=".001" placeholder="grams"><br>
+      <label>4.</label>
+      <select class="ops" name="VARIANCE 4">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V4 QTY" step=".001" placeholder="grams"><br>
+      <label>5.</label>
+      <select class="ops" name="VARIANCE 5">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V5 QTY" step=".001" placeholder="grams"><br>
+      <label>6.</label>
+      <select class="ops" name="VARIANCE 6">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V6 QTY" step=".001" placeholder="grams"><br>
+      <label>7.</label>
+      <select class="ops" name="VARIANCE 7">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V7 QTY" step=".001" placeholder="grams"><br>
+      <label>8.</label>
+      <select class="ops" name="VARIANCE 8">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V8 QTY" step=".001" placeholder="grams"><br>
+      <label>9.</label>
+      <select class="ops" name="VARIANCE 9">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V9 QTY" step=".001" placeholder="grams"><br>
+      <label>0.</label>
+      <select class="ops" name="VARIANCE 10">
+        <option selected disabled>Select Here</option>
+        <option value="Buto-buto From Kasim">Buto-buto From Kasim</option>
+        <option value="Kasim for Debone">Kasim for Debone</option>
+        <option value="Laman for Giniling">Laman for Giniling</option>
+        <option value="Lechon Kawali From Kasim">Lechon Kawali From Kasim</option>
+        <option value="Riblets From Kasim">Riblets From Kasim</option>
+        <option value="Sisig Toppings From Kasim">Sisig Toppings From Kasim</option>
+        <option value="Trimmings Laman From Kasim">Trimmings Laman From Kasim</option>
+        <option value="Rib Platter">Rib Platter</option>
+        <option value="Rib Trimmings">Rib Trimmings</option>
+        <option value="Trimmings Laman From Ribs">Trimmings Laman From Ribs</option>
+        <option value="Buto-buto From Pork Chop">Buto-buto From Pork Chop</option>
+        <option value="Pork Chop From Debone">Pork Chop From Debone</option>
+        <option value="Pork Chop Laman for Giniling">Pork Chop Laman for Giniling</option>
+        <option value="Trimmings Laman From  Pork Chop">Trimmings Laman From Pork Chop</option>
+        <option value="Liempo for Lechon Kawali">Liempo for Lechon Kawali</option>
+        <option value="Sisig Toppings From Liempo">Sisig Toppings From Liempo</option>
+        <option value="Tablo Beef Cooked Trimmings">Tablo Beef Cooked Trimmings</option>
+        <option value="Pork Ragu Cooked - Old Stock">Pork Ragu Cooked - Old Stock</option>
+        <option value="Pork Skin">Pork Skin</option>
+        <option value="Mgr. Pork Steak">Mgr. Pork Steak</option>
+        <option value="Beef Excess">Beef Excess</option>
+        <option value="Sawdust">Sawdust</option>
+        <option value="Beef Forequarter Kalitiran">Beef Forequarter Kalitiran</option>
+        <option value="Beef Ox Skin">Beef Ox Skin</option>
+        <option value="Beef Forequarter">Beef Forequarter</option>
+        <option value="Beef Short Ribs">Beef Short Ribs</option>
+        <option value="Beef Shortplate">Beef Shortplate</option>
+        <option value="Beef Tongue (Vac)">Beef Tongue (Vac)</option>
+        <option value="Beef Tripe">Beef Tripe</option>
+        <option value="Pork Liempo/belly">Pork Liempo/belly</option>
+        <option value="Pork Pata Front">Pork Pata Front</option>
+        <option value="Pork Pata Hocks">Pork Pata Hocks</option>
+      </select>
+      <input onblur="findTotal()" class="vari" type="number" name="V10 QTY" step=".001" placeholder="grams"><br>
+      <input type="hidden" name="" step="0.001" id="remainingvalh"><br>
+      <label>ADDITIONAL FROM EXCESS</label><br>
+      <input id="dt" onblur="findTotal()" class="qty" type="number" name="ADDITIONAL FROM EXCESS" step=".001"
+        placeholder="grams"><br>
+      <input class="dt" type="text" name="EXCESS DATE MARKS" step=".001" placeholder="date mark (mm/dd)"><br>
+      <br>
+      <label>STARTING WEIGHT</label>
+      <input id="total" onchange="updateDue()" class="qty" type="number" name="START" step=".001"
+        placeholder="grams"><br>
+      <p><label>TOTAL USED</label><span class="required"></span>
+        <input type="number" name="" id="indeposit" step="0.001" onchange="updateDue()">
+      </p>
+      <label>LOSS</label>
+      <input type="number" name="LOSS" step="0.001" id="remainingval">
+      <fieldset style="margin-top: 20px; column-count: 2;">
+        <legend>PREPARED BY:</legend>
+        <ul>
+          <li><input type="checkbox" name="IN CHARGE (1)" class="largerCheckbox" value="BELLE">- BELLE</li>
+          <li><input type="checkbox" name="IN CHARGE (2)" class="largerCheckbox" value="TINA"
+              style="margin-top: 20px;">- TINA</li>
+          <li><input type="checkbox" name="IN CHARGE (3)" class="largerCheckbox" value="VICKY"
+              style="margin-top: 20px;">-
+            VICKY</li>
+          <li><input type="checkbox" name="IN CHARGE (4)" class="largerCheckbox" value="GERALD"
+              style="margin-top: 20px;">- GERALD</li>
+          <li><input type="checkbox" name="IN CHARGE (5)" class="largerCheckbox" value="RODEL"
+              style="margin-top: 20px;">- RODEL</li>
+          <li><input type="checkbox" name="IN CHARGE (6)" class="largerCheckbox" value="CARMEN"
+              style="margin-top: 20px;">- CARMEN</li>
+          <li><input type="checkbox" name="IN CHARGE (7)" class="largerCheckbox" value="AGNES"
+              style="margin-top: 20px;">- AGNES</li>
+          <li><input type="checkbox" name="" class="largerCheckbox" value="" style="margin-top: 20px;">- OTHERS</li>
+        </ul>
+      </fieldset><br>
+      <input type="hidden" name="STIME">
+      <input type="hidden" name="FTIME">
+      <label>NOTES:</label><br>
+      <input style="width: 250px;" type="text" name="NOTES" placeholder="Notes Here"><br>
+      <button type="submit" onclick="hideButton(this)">ADD</button><br>
+  </form>
+  <form action="beefmenu.html">
+    <input type="submit" value="BACK" class="button">
+  </form>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</html>
