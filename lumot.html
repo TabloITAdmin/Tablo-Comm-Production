@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="Tablo Logo.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pusit Lumot Raw Mat</title>
+</head>
+
+<body id="prods" onload="document.forms[0].elements['STIME'].value = String(new Date()).match(/\d\d:\d\d:\d\d/)">
+  <form onsubmit="this.elements['FTIME'].value= String(new Date()).match(/\d\d:\d\d:\d\d/)"
+    action="https://script.google.com/macros/s/AKfycbz0CHy5iXP-t2QRnX8bXsPDYSsO7zDSO7xLUBCMkM6JxoZH3q1vaGxv49CGXJTCu1zYLQ/exec"
+    method="post">
+    <div class="container">
+      <img src="Tablo Logo.jpg" alt="Tablo Logo">
+      <h1><strong>PUSIT LUMOT</strong></h1>
+      <label>BRAND</label>
+      <select name="BRAND" id="brand">
+        <option selected disabled>Select Brand Here</option>
+        <option value="Conestoga">Conestoga</option>
+        <option value="Dubreton">Dubreton</option>
+        <option value="Olymel">Olymel</option>
+        <option value="Yosemite">Yosemite</option>
+        <option value="Rantoul">Rantoul</option>
+        <option value="CBCO">CBCO</option>
+        <option value="Maple Leaf">Maple Leaf</option>
+        <option value="Asta">Asta</option>
+        <option value="Orviande">Orviande</option>
+        <option value="Friboi">Friboi</option>
+        <option value="Mondelli">Mondelli</option>
+        <option value="Dunleavy">Dunleavy</option>
+        <option value="Excel">Excel</option>
+        <option value="Gosschack">Gosschack</option>
+        <option value="Alliiance">Alliance</option>
+        <option value="BLSO">BLSO</option>
+        <option value="Smithfield">Smithfield</option>
+      </select>
+      <input id="time" name="TIME"
+        style="width: 380px; margin-bottom: 20px; text-align: center; background-color: rgb(255, 141, 90);"><br>
+      <input type="hidden" name="PRODUCT NAME" value="Pusit Lumot">
+      <label>FINISHED GOODS</label>
+      <input onblur="findTotal()" class="vari" type="number" name="FINISHED" step=".001" placeholder="grams"><br>
+
+
+      <input type="hidden" name="" step="0.001" id="remainingvalh"><br>
+      <label>ADDITIONAL FROM EXCESS</label><br>
+      <input id="dt" onblur="findTotal()" class="qty" type="number" name="ADDITIONAL FROM EXCESS" step=".001"
+        placeholder="grams"><br>
+      <input class="dt" type="text" name="EXCESS DATE MARKS" step=".001" placeholder="date mark (mm/dd)"><br>
+      <br>
+      <label>STARTING WEIGHT</label>
+      <input id="total" onchange="updateDue()" class="qty" type="number" name="START" step=".001"
+        placeholder="grams"><br>
+      <p><label>TOTAL USED</label><span class="required"></span>
+        <input type="number" name="" id="indeposit" step="0.001" onchange="updateDue()">
+      </p>
+      <label>LOSS</label>
+      <input type="number" name="LOSS" step="0.001" id="remainingval">
+      <fieldset style="margin-top: 20px; column-count: 2;">
+        <legend>PREPARED BY:</legend>
+        <ul>
+          <li><input type="checkbox" name="IN CHARGE (1)" class="largerCheckbox" value="BELLE">- BELLE</li>
+          <li><input type="checkbox" name="IN CHARGE (2)" class="largerCheckbox" value="TINA"
+              style="margin-top: 20px;">- TINA</li>
+          <li><input type="checkbox" name="IN CHARGE (3)" class="largerCheckbox" value="VICKY"
+              style="margin-top: 20px;">-
+            VICKY</li>
+          <li><input type="checkbox" name="IN CHARGE (4)" class="largerCheckbox" value="GERALD"
+              style="margin-top: 20px;">- GERALD</li>
+          <li><input type="checkbox" name="IN CHARGE (5)" class="largerCheckbox" value="RODEL"
+              style="margin-top: 20px;">- RODEL</li>
+          <li><input type="checkbox" name="IN CHARGE (6)" class="largerCheckbox" value="CARMEN"
+              style="margin-top: 20px;">- CARMEN</li>
+          <li><input type="checkbox" name="IN CHARGE (7)" class="largerCheckbox" value="AGNES"
+              style="margin-top: 20px;">- AGNES</li>
+          <li><input type="checkbox" name="" class="largerCheckbox" value="" style="margin-top: 20px;">- OTHERS</li>
+        </ul>
+      </fieldset><br>
+      <input type="hidden" name="STIME">
+      <input type="hidden" name="FTIME">
+      <label>NOTES:</label><br>
+      <input style="width: 250px;" type="text" name="NOTES" placeholder="Notes Here"><br>
+      <button type="submit" onclick="hideButton(this)">ADD</button><br>
+  </form>
+  <form action="seafoodmenu.html">
+    <input type="submit" value="BACK" class="button">
+  </form>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</html>
